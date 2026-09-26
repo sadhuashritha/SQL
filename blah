@@ -1,0 +1,227 @@
+🟠 PART 4 — RIGHT JOIN
+Remember:
+RIGHT JOIN → ALL rows from the right table + matching rows from the left table.
+
+Q31
+Display all departments and their employees.
+Q32
+Display all departments, including departments with no employees.
+Q33
+Find departments that don't have any employees.
+Q34
+Display department ID, department name, and employee name.
+Q35
+Display all departments and employee salaries.
+Q36
+Display all departments and the cities of their employees.
+Q37
+Display all departments and employees earning more than 60000.
+Q38
+Display all departments with their employee count.
+Q39
+Find departments that have at least one employee.
+Q40 🔥
+Display every department and its employee count, including departments with zero employees.
+🔴 PART 5 — FULL OUTER JOIN CONCEPT
+⚠️ Important for MySQL:
+MySQL doesn't directly support:
+FULL OUTER JOIN
+
+But you should understand the concept and know how to simulate it.
+Q41
+Explain the difference between INNER JOIN, LEFT JOIN, RIGHT JOIN, and FULL OUTER JOIN.
+Q42
+What happens to an employee whose department doesn't exist during a FULL OUTER JOIN?
+Q43
+What happens to a department that has no employees during a FULL OUTER JOIN?
+Q44
+Write a query that simulates a FULL OUTER JOIN using LEFT JOIN and UNION.
+Q45
+Display all employees and all departments, including unmatched records.
+Q46
+Display all employee IDs and department IDs, including unmatched records.
+Q47
+Find employees without departments and departments without employees.
+Q48
+Display employee name and department name, keeping unmatched rows from both tables.
+Q49
+Find all records that don't have a match on the other table.
+Q50 🔥
+Simulate a FULL OUTER JOIN in MySQL and display:
+employee_name
+department_name
+
+including unmatched employees and departments.
+🟣 PART 6 — SELF JOIN
+Now the fun part 😈
+We'll use the manager_id column from employees.
+Remember:
+SELF JOIN = same table joined with itself.
+
+Q51
+Display every employee and their manager.
+Q52
+Display:
+employee_name
+manager_name
+
+Q53
+Find all employees who have a manager.
+Q54
+Find all employees who don't have a manager.
+Q55
+Find employees whose manager is Rahul.
+Q56
+Display:
+employee_id
+employee_name
+manager_id
+manager_name
+
+Q57
+Find employees who report to the same manager.
+Q58
+Find pairs of employees who have the same manager.
+Q59
+Find employees whose manager ID is 1.
+Q60
+Display employees and their managers ordered alphabetically by employee name.
+🔥 PART 7 — SELF JOIN CHALLENGES
+Q61
+Find employees whose salary is greater than their manager's salary.
+Q62
+Find employees whose salary is less than their manager's salary.
+Q63
+Display the employee and manager salaries together.
+Q64
+Display employees whose manager works in department 10.
+Q65
+Find employees whose manager lives in Hyderabad.
+Q66
+Find employees who have the same manager and belong to the same department.
+Q67
+Find pairs of employees who belong to the same department.
+⚠️ Be careful—you don't want an employee matched with themselves.
+Q68
+Find pairs of employees whose salaries are equal.
+Q69
+Find pairs of employees who have different salaries but work in the same department.
+Q70 🔥
+Find pairs of employees who work in the same department but have different managers.
+🟡 PART 8 — MULTIPLE TABLE JOINS
+Now we're going beyond two tables.
+We'll eventually add tables such as:
+employees
+departments
+projects
+
+Q71
+Display employee name, department name, and project name.
+Q72
+Find employees working on projects belonging to the IT department.
+Q73
+Display employee name, department name, and salary for all employees assigned to a project.
+Q74
+Find employees who are working on more than one project.
+Q75
+Display all projects and the employees working on them.
+Q76
+Find projects with no employees assigned.
+Q77
+Find the department with the highest number of employees.
+Q78
+Find the department with the highest total salary.
+Q79
+Find the average salary of employees in each department.
+Q80 🔥
+Find the highest-paid employee in each department.
+🚀 PART 9 — JOIN + GROUP BY
+These are very important for placements.
+Q81
+Count employees in each department.
+Q82
+Find the average salary of each department.
+Q83
+Find the maximum salary in each department.
+Q84
+Find the minimum salary in each department.
+Q85
+Find the total salary paid by each department.
+Q86
+Find departments having more than 2 employees.
+Q87
+Find departments whose average salary is greater than 60000.
+Q88
+Find departments whose total salary is greater than 150000.
+Q89
+Find the department with the highest average salary.
+Q90 🔥
+Find the department with the highest total salary.
+⚠️ These will require the HAVING concept, so we'll come back to them after you've learned it properly.
+💀 PART 10 — PLACEMENT / LEETCODE STYLE
+These combine everything you've learned.
+Q91
+Find the second-highest salary among employees and display their department.
+Q92
+Find employees earning more than the average salary of their department.
+Q93
+Find employees earning more than their manager.
+Q94
+Find employees who belong to the same department as Rahul.
+Q95
+Find employees who belong to a department with more than 2 employees.
+Q96
+Find the highest-paid employee in each department.
+Q97
+Find the second-highest-paid employee in each department.
+Q98
+Find departments where every employee earns more than 50000.
+Q99
+Find employees whose salary is higher than the average salary of all employees.
+Q100 🔥🔥
+Find the employee(s) with the highest salary in each department and display:
+employee_name
+department_name
+salary
+
+🧠 Your JOIN mastery path
+Don't try to solve Q1–Q100 randomly.
+Follow this:
+Q1–10
+Basic JOIN
+       ↓
+Q11–20
+INNER JOIN
+       ↓
+Q21–30
+LEFT JOIN
+       ↓
+Q31–40
+RIGHT JOIN
+       ↓
+Q41–50
+FULL JOIN concept
+       ↓
+Q51–60
+SELF JOIN
+       ↓
+Q61–70
+SELF JOIN challenges
+       ↓
+Q71–80
+Multiple-table JOIN
+       ↓
+Q81–90
+JOIN + GROUP BY + HAVING
+       ↓
+Q91–100
+Placement/LeetCode level
+
+⚠️ One important thing, bro
+You don't know HAVING yet, so don't worry if Q86–90 and some later questions look impossible right now. That's intentional.
+First we'll master:
+JOIN → INNER → LEFT → RIGHT → SELF
+Then we'll learn:
+HAVING
+Then we'll come back and destroy the harder questions. 😂🔥
+And yes — 100 JOIN questions is absolutely enough for serious practice. After these, we'll use actual LeetCode JOIN problems rather than endlessly doing artificial questions. 👊
