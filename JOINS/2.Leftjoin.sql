@@ -34,5 +34,8 @@ select employees.*,departments.* from employees left join departments on employe
 
 
 -- Count the number of employees in each department using LEFT JOIN.
+select count(employees.name), departments.dept_name from departments left join employees on employees.dept_id = departments.dept_id group by departments.dept_id;
+
 
 -- Display every department and the number of employees in it, including departments with zero employees.
+select count(employees.name), departments.dept_name from departments left join employees on employees.dept_id = departments.dept_id group by departments.dept_id;
