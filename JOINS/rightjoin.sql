@@ -28,8 +28,12 @@ select employees.*, departments.* from employees right join departments on emplo
 
 
 -- Display all departments with their employee count.
+select count(employees.name), departments.dept_name from employees right join departments on employees.dept_id = departments.dept_id group by departments.dept_name;
 
 
 -- Find departments that have at least one employee.
+select count(employees.name) as count, departments.dept_name from employees right join departments on employees.dept_id = departments.dept_id group by departments.dept_name where count >= 1;
+
 
 -- Display every department and its employee count, including departments with zero employees.
+select count(employees.name), departments.dept_name from employees right join departments on employees.dept_id = departments.dept_id group by departments.dept_name;
