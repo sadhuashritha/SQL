@@ -27,12 +27,14 @@ select employees.city, departments.* from employees right join departments on em
 select employees.*, departments.* from employees right join departments on employees.dept_id = departments.dept_id where employees.salary > 60000;
 
 
+--  Show every department, but only show employees whose salary is >60000.
+select employees.*, departments.* from employees right join departments on employees.dept_id = departments.dept_id and employees.salary > 60000;
+
+
 -- Display all departments with their employee count.
 select count(employees.name), departments.dept_name from employees right join departments on employees.dept_id = departments.dept_id group by departments.dept_name;
 
-
--- Find departments that have at least one employee.
-select count(employees.name) as count, departments.dept_name from employees right join departments on employees.dept_id = departments.dept_id group by departments.dept_name where count >= 1;
+--  Find departments that have at least one employee.
 
 
 -- Display every department and its employee count, including departments with zero employees.
